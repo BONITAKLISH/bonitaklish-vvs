@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONITAKLISH - Rapper, Visionary, Dreamer | Official Website</title>
+    <meta name="description" content="Official website of BONITAKLISH, an emerging rapper with a vision to inspire and move listeners worldwide. Discover his journey from writing first bars at 15 to building a global movement through authentic storytelling and powerful lyrics.">
+
+    <!-- CSS Reset - Using unpkg CDN which has better reliability -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" crossorigin="anonymous" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+      .broken-image-placeholder {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #f3f4f6 !important;
+        border: 2px dashed #d1d5db !important;
+        border-radius: 8px !important;
+        color: #6b7280 !important;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        min-height: 120px !important;
+        max-width: 100% !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+      }
+      
+      .broken-image-placeholder:hover {
+        background-color: #e5e7eb !important;
+        border-color: #9ca3af !important;
+        color: #374151 !important;
+      }
+      
+      .broken-image-content {
+        text-align: center !important;
+        padding: 16px !important;
+        pointer-events: none !important;
+      }
+      
+      .broken-image-icon {
+        font-size: 24px !important;
+        margin-bottom: 8px !important;
+        line-height: 1 !important;
+      }
+      
+      .broken-image-title {
+        font-weight: 600 !important;
+        margin-bottom: 4px !important;
+        color: inherit !important;
+      }
+      
+      .broken-image-instruction {
+        font-size: 12px !important;
+        opacity: 0.7 !important;
+        color: inherit !important;
+        line-height: 1.3 !important;
+      }
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --neon-green: #00ff88;
+  --emerald: #10b981;
+  --dark-bg: #0a0a0a;
+  --card-bg: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --glow-green: 0 0 20px rgba(0, 255, 136, 0.5);
+  --glow-green-strong: 0 0 30px rgba(0, 255, 136, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--neon-green);
+  text-shadow: var(--glow-green);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-green);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neon-green);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--neon-green);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 80px 32px 32px;
+  transition: right 0.3s ease;
+  z-index: 999;
+  border-left: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobile-menu a:hover {
+  color: var(--neon-green);
+  transform: translateX(8px);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 24px 80px;
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.1) 0%, rgba(10, 10, 10, 1) 70%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(0, 255, 136, 0.03) 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(0, 255, 136, 0.03) 50%, transparent 52%);
+  background-size: 60px 60px;
+  opacity: 0.5;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  font-size: 0.875rem;
+  color: var(--neon-green);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0ms forwards;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin-bottom: 24px;
+  color: var(--neon-green);
+  text-shadow: var(--glow-green-strong);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 150ms forwards;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 300ms forwards;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 48px;
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: var(--glow-green);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 450ms forwards;
+  letter-spacing: 1px;
+}
+
+.hero-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-green-strong);
+  background: var(--emerald);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Journey Section */
+.journey {
+  padding: 120px 24px;
+  position: relative;
+}
+
+.journey::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--neon-green), transparent);
+  opacity: 0.3;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--neon-green);
+  text-shadow: var(--glow-green);
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.journey-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.journey-text {
+  font-size: 1.125rem;
+  line-height: 2;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.journey-text strong {
+  color: var(--neon-green);
+  font-weight: 700;
+}
+
+.journey-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.highlight-card {
+  background: var(--card-bg);
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green);
+  transform: translateY(-8px);
+}
+
+.highlight-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 50%;
+  color: var(--neon-green);
+}
+
+.highlight-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  margin-bottom: 8px;
+}
+
+.highlight-text {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Music Platforms */
+.platforms {
+  padding: 120px 24px;
+  background: linear-gradient(180deg, var(--dark-bg) 0%, rgba(16, 185, 129, 0.05) 50%, var(--dark-bg) 100%);
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.platform-card {
+  background: var(--card-bg);
+  padding: 40px 24px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid rgba(0, 255, 136, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.platform-card:hover {
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green-strong);
+  transform: translateY(-12px) scale(1.05);
+}
+
+.platform-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 50%;
+  color: var(--neon-green);
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover .platform-icon {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  box-shadow: var(--glow-green-strong);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.platform-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.platform-handle {
+  font-size: 0.875rem;
+  color: var(--neon-green);
+}
+
+/* Schedule Section */
+.schedule {
+  padding: 120px 24px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.schedule-card {
+  background: var(--card-bg);
+  padding: 48px 32px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid rgba(0, 255, 136, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.schedule-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.schedule-card:hover::before {
+  opacity: 1;
+}
+
+.schedule-card:hover {
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green);
+  transform: translateY(-8px);
+}
+
+.schedule-day {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--neon-green);
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.schedule-content-type {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.schedule-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 120px 24px;
+  background: linear-gradient(180deg, var(--dark-bg) 0%, rgba(16, 185, 129, 0.05) 50%, var(--dark-bg) 100%);
+}
+
+.gallery-categories {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 12px 32px;
+  background: var(--card-bg);
+  border: 2px solid rgba(0, 255, 136, 0.1);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid rgba(0, 255, 136, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green-strong);
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-title {
+  color: var(--neon-green);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 120px 24px;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-intro {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  line-height: 1.8;
+}
+
+.contact-form {
+  background: var(--card-bg);
+  padding: 48px;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 255, 136, 0.1);
+}
+
+.form-group {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: var(--neon-green);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  background: rgba(0, 255, 136, 0.05);
+  border: 2px solid rgba(0, 255, 136, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green);
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--glow-green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-green-strong);
+  background: var(--emerald);
+}
+
+.contact-socials {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-link {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border: 2px solid rgba(0, 255, 136, 0.2);
+  border-radius: 50%;
+  color: var(--neon-green);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green-strong);
+  transform: translateY(-4px);
+}
+
+/* Footer */
+footer {
+  padding: 64px 24px 32px;
+  border-top: 1px solid rgba(0, 255, 136, 0.2);
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+  box-shadow: var(--glow-green);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--neon-green);
+  text-shadow: var(--glow-green);
+  margin-bottom: 24px;
+  letter-spacing: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.footer-social-link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border: 2px solid rgba(0, 255, 136, 0.2);
+  border-radius: 50%;
+  color: var(--neon-green);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  border-color: var(--neon-green);
+  box-shadow: var(--glow-green);
+  transform: translateY(-4px) rotate(360deg);
+}
+
+.footer-copyright {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+/* Scroll Animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .journey-highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .platforms-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .hero h1 {
+    letter-spacing: 4px;
+  }
+  
+  .journey-highlights {
+    grid-template-columns: 1fr;
+  }
+  
+  .platforms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form {
+    padding: 32px 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+.style-edit-section {
+        transition: box-shadow 0.2s ease !important;
+        cursor: pointer !important;
+      }
+      .style-edit-section:hover {
+        box-shadow: 0 0 0 2px #3b82f6 !important;
+      }
+      .style-edit-section.selected {
+        box-shadow: 0 0 0 2px #ef4444 !important;
+      }
+
+.text-editable {
+        cursor: text !important;
+        /* Removed transition to prevent pulsing effect */
+      }
+      .text-editable:hover {
+        text-decoration: underline !important;
+        text-decoration-color: #ff8c00 !important;
+        text-decoration-thickness: 2px !important;
+      }
+      .text-editable.editing {
+        text-decoration: underline !important;
+        text-decoration-color: #ff8c00 !important;
+        text-decoration-thickness: 2px !important;
+      }
+    </style>
+</head>
+<body>
+    <!-- AI Generated Content Only - No Preset Header/Footer -->
+    
+    <!-- AI Generated Content Only - No Preset Header/Footer -->
+    <nav class="style-edit-section">
+  <div class="nav-container">
+    <div class="logo">BONITAKLISH</div>
+    <ul class="nav-links">
+      <li class="text-editable" contenteditable="true"><a href="#home" class="text-editable" contenteditable="true">Home</a></li>
+      <li class="text-editable" contenteditable="true"><a href="#journey" class="text-editable active" contenteditable="true">Journey</a></li>
+      <li class="text-editable" contenteditable="true"><a href="#music" class="text-editable" contenteditable="true">Music</a></li>
+      <li class="text-editable" contenteditable="true"><a href="#schedule" class="text-editable" contenteditable="true">Schedule</a></li>
+      <li class="text-editable" contenteditable="true"><a href="#gallery" class="text-editable" contenteditable="true">Gallery</a></li>
+      <li class="text-editable" contenteditable="true"><a href="#contact" class="text-editable" contenteditable="true">Contact</a></li>
+    </ul>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" class="lucide lucide-menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <ul>
+    <li class="text-editable" contenteditable="true"><a href="#home" class="text-editable" contenteditable="true">Home</a></li>
+    <li class="text-editable" contenteditable="true"><a href="#journey" class="text-editable" contenteditable="true">Journey</a></li>
+    <li class="text-editable" contenteditable="true"><a href="#music" class="text-editable" contenteditable="true">Music</a></li>
+    <li class="text-editable" contenteditable="true"><a href="#schedule" class="text-editable" contenteditable="true">Schedule</a></li>
+    <li class="text-editable" contenteditable="true"><a href="#gallery" class="text-editable" contenteditable="true">Gallery</a></li>
+    <li class="text-editable" contenteditable="true"><a href="#contact" class="text-editable" contenteditable="true">Contact</a></li>
+  </ul>
+</div>
+
+<main class="style-edit-section">
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Artist • Visionary • Dreamer</div>
+      <h1 class="text-editable" contenteditable="true">BONITAKLISH</h1>
+      <p class="hero-subtitle text-editable" contenteditable="true">Rapper • Storyteller • Global Dreamer</p>
+      <a href="#music" class="hero-cta text-editable" contenteditable="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="play-circle" class="lucide lucide-play-circle"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"></path><circle cx="12" cy="12" r="10"></circle></svg>
+        Listen Now
+      </a>
+    </div>
+  </section>
+
+  <section id="journey" class="journey">
+    <div class="container">
+      <div class="section-header animate-in" data-animate="">
+        <h2 class="section-title text-editable" contenteditable="true">MY JOURNEY</h2>
+        <p class="section-subtitle text-editable" contenteditable="true">From Late Night Bars to Global Dreams</p>
+      </div>
+      
+      <div class="journey-content">
+        <p class="journey-text animate-in text-editable" data-animate="" contenteditable="true">
+          My journey as <strong>BONITAKLISH</strong> began when I was just <strong>15 years old</strong> — I fell in love with making music, writing my first bars in my room late at night, dreaming of bigger stages. Those early days were raw and unfiltered, filled with notebooks, voice memos, and an unshakeable belief that my words could move people.
+        </p>
+        
+        <p class="journey-text animate-in text-editable" data-animate="" contenteditable="true">
+          From those early freestyles to now, I've grown not just as an artist, but as a man with a <strong>vision</strong>: to inspire, move, and uplift through my rap. Every song is a piece of my story, every verse a chapter in a journey that's still being written. The struggles, the late nights, the moments of doubt — they've all shaped the artist you hear today.
+        </p>
+        
+        <p class="journey-text animate-in text-editable" data-animate="" contenteditable="true">
+          My dream is to one day reach listeners <strong>all over the world</strong>, to tell my story, and to prove that anything is possible when you commit to the craft. This isn't just about music — it's about legacy, connection, and showing the next generation that their dreams are valid. Every track I drop, every performance I give, is a step closer to that vision.
+        </p>
+        
+        <div class="journey-highlights">
+          <div class="highlight-card animate-in" data-animate="">
+            <div class="highlight-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            </div>
+            <h3 class="highlight-title text-editable" contenteditable="true">First Bars</h3>
+            <p class="highlight-text text-editable" contenteditable="true">Age 15, writing in my room, discovering my voice</p>
+          </div>
+          
+          <div class="highlight-card animate-in" data-animate="">
+            <div class="highlight-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mic" class="lucide lucide-mic"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect x="9" y="2" width="6" height="13" rx="3"></rect></svg>
+            </div>
+            <h3 class="highlight-title text-editable" contenteditable="true">First Performance</h3>
+            <p class="highlight-text text-editable" contenteditable="true">Taking the stage, feeling the energy, knowing this was it</p>
+          </div>
+          
+          <div class="highlight-card animate-in" data-animate="">
+            <div class="highlight-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h3 class="highlight-title text-editable" contenteditable="true">Global Vision</h3>
+            <p class="highlight-text text-editable" contenteditable="true">Building a movement, reaching souls worldwide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="music" class="platforms">
+    <div class="container">
+      <div class="section-header animate-in" data-animate="">
+        <h2 class="section-title text-editable" contenteditable="true">LISTEN NOW</h2>
+        <p class="section-subtitle text-editable" contenteditable="true">Stream My Music on Your Favorite Platform</p>
+      </div>
+      
+      <div class="platforms-grid">
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          </div>
+          <div class="platform-name">Spotify</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          </div>
+          <div class="platform-name">Apple Music</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <div class="platform-name">YouTube</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          </div>
+          <div class="platform-name">SoundCloud</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </div>
+          <div class="platform-name">Instagram</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          </div>
+          <div class="platform-name">TikTok</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true" style="">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </div>
+          <div class="platform-name">Twitter</div>
+          <div class="platform-handle">@lil_wrld_2009</div>
+        </a>
+        
+        <a href="#" class="platform-card animate-in text-editable" data-animate="" contenteditable="true">
+          <div class="platform-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="facebook" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </div>
+          <div class="platform-name">Facebook</div>
+          <div class="platform-handle">@bonitaklish</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="schedule">
+    <div class="container">
+      <div class="section-header animate-in" data-animate="">
+        <h2 class="section-title text-editable" contenteditable="true">CONTENT SCHEDULE</h2>
+        <p class="section-subtitle text-editable" contenteditable="true">Stay Updated with Fresh Drops</p>
+      </div>
+      
+      <div class="schedule-grid">
+        <div class="schedule-card animate-in" data-animate="">
+          <div class="schedule-day">WEDNESDAY</div>
+          <div class="schedule-content-type">Freestyles</div>
+          <p class="schedule-description text-editable" contenteditable="true">Raw, unfiltered bars straight from the vault</p>
+        </div>
+        
+        <div class="schedule-card animate-in" data-animate="">
+          <div class="schedule-day">FRIDAY</div>
+          <div class="schedule-content-type">New Songs</div>
+          <p class="schedule-description text-editable" contenteditable="true">Full tracks, complete productions, new vibes</p>
+        </div>
+        
+        <div class="schedule-card animate-in" data-animate="">
+          <div class="schedule-day">DAILY</div>
+          <div class="schedule-content-type">TikTok / Reels</div>
+          <p class="schedule-description text-editable" contenteditable="true">Behind-the-scenes, clips, and daily content</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header animate-in" data-animate="">
+        <h2 class="section-title text-editable" contenteditable="true">VISUAL ARCHIVE</h2>
+        <p class="section-subtitle text-editable" contenteditable="true">Music Videos, Photoshoots &amp; Behind The Scenes</p>
+      </div>
+      
+      <div class="gallery-categories">
+        <button class="category-btn active text-editable" contenteditable="true">All</button>
+        <button class="category-btn text-editable" contenteditable="true">Music Videos</button>
+        <button class="category-btn text-editable" contenteditable="true">Photoshoots</button>
+        <button class="category-btn text-editable" contenteditable="true">Behind The Scenes</button>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item animate-in" data-animate="">
+          <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Music studio recording session" loading="lazy" data-broken-image-processed="true">
+          <div class="gallery-overlay">
+            <div class="gallery-title">Studio Session</div>
+          </div>
+        </div>
+        
+        <div class="gallery-item animate-in" data-animate="">
+          <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Live performance on stage" loading="lazy" data-broken-image-processed="true">
+          <div class="gallery-overlay">
+            <div class="gallery-title">Live Performance</div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-animate="">
+          <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Music video production" loading="lazy" data-broken-image-processed="true">
+          <div class="gallery-overlay">
+            <div class="gallery-title">Music Video Shoot</div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-animate="">
+          <img src="https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg" alt="Professional photoshoot" loading="lazy" data-broken-image-processed="true">
+          <div class="gallery-overlay">
+            <div class="gallery-title">Photoshoot</div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-animate="">
+          <img src="https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg" alt="Behind the scenes" loading="lazy" data-broken-image-processed="true">
+          <div class="gallery-overlay">
+            <div class="gallery-title">Behind The Scenes</div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-animate="">
+          <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Concert performance" loading="lazy" data-broken-image-processed="true">
+          <div class="gallery-overlay">
+            <div class="gallery-title">Concert Night</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header" data-animate="">
+        <h2 class="section-title text-editable" contenteditable="true">LET'S CONNECT</h2>
+        <p class="section-subtitle text-editable" contenteditable="true">Bookings • Features • Collaborations • Media Inquiries</p>
+      </div>
+      
+      <div class="contact-content">
+        <p class="contact-intro text-editable" data-animate="" contenteditable="true">
+          For bookings, features, collabs, or media inquiries — reach out to BONITAKLISH. Let's create something unforgettable together.
+        </p>
+        
+        <form class="contact-form" data-animate="">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required="">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required="">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required="">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required=""></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn text-editable" contenteditable="true">Send Message</button>
+        </form>
+        
+        <div class="contact-socials" data-animate="">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="style-edit-section">
+  <div class="footer-content">
+    <div class="footer-logo">BONITAKLISH</div>
+    
+    <div class="footer-socials">
+      <a href="#" class="footer-social-link" aria-label="Spotify">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </a>
+      <a href="#" class="footer-social-link" aria-label="Apple Music">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </a>
+      <a href="#" class="footer-social-link" aria-label="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+      </a>
+      <a href="#" class="footer-social-link" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+      </a>
+      <a href="#" class="footer-social-link" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+      </a>
+      <a href="#" class="footer-social-link" aria-label="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </a>
+    </div>
+    
+    <div class="footer-copyright">
+      © 2025 BONITAKLISH. All rights reserved. | Rapper • Visionary • Dreamer
+    </div>
+  </div>
+</footer>
+
+    
+
+
+
+    <script>
+      // Initialize Lucide icons
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      
+  (function() {
+    // Create DOM-ready wrapper that works in iframes and standalone
+    function createDOMContentLoadedWrapper() {
+      const originalAddEventListener = document.addEventListener;
+      document.addEventListener = function(event, handler, options) {
+        if (event === 'DOMContentLoaded' && document.readyState !== 'loading') {
+          // DOM already loaded, execute immediately
+          setTimeout(handler, 0);
+          return;
+        }
+        return originalAddEventListener.call(this, event, handler, options);
+      };
+    }
+
+    // Set up wrapper if DOM is already loaded
+    if (document.readyState !== 'loading') {
+      createDOMContentLoadedWrapper();
+    }
+
+    // Execute custom JavaScript
+    try {
+      // Initialize Lucide icons
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      
+  (function() {
+    // Create DOM-ready wrapper that works in iframes and standalone
+    function createDOMContentLoadedWrapper() {
+      const originalAddEventListener = document.addEventListener;
+      document.addEventListener = function(event, handler, options) {
+        if (event === 'DOMContentLoaded' && document.readyState !== 'loading') {
+          // DOM already loaded, execute immediately
+          setTimeout(handler, 0);
+          return;
+        }
+        return originalAddEventListener.call(this, event, handler, options);
+      };
+    }
+
+    // Set up wrapper if DOM is already loaded
+    if (document.readyState !== 'loading') {
+      createDOMContentLoadedWrapper();
+    }
+
+    // Execute custom JavaScript
+    try {
+      // Auto-injected agent type (safe global)
+const agentType = "website";
+// Global fallback for any window references
+window.__CS_AGENT_TYPE = "website";
+
+(function() {
+  'use strict';
+
+  function init() {
+    console.log('BONITAKLISH website initialized');
+
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        const icon = menuBtn.querySelector('i');
+        if (icon) {
+          const isOpen = mobileMenu.classList.contains('active');
+          icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+        }
+      });
+
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('active');
+          const icon = menuBtn.querySelector('i');
+          if (icon) {
+            icon.setAttribute('data-lucide', 'menu');
+            if (typeof lucide !== 'undefined') {
+              lucide.createIcons();
+            }
+          }
+        });
+      });
+    }
+
+    // Smooth scroll for navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    if ('IntersectionObserver' in window) {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('[data-animate]').forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+
+    // Gallery category filter
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    categoryBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        categoryBtns.forEach(function(b) {
+          b.classList.remove('active');
+        });
+        this.classList.add('active');
+        
+        const category = this.textContent.trim().toLowerCase();
+        
+        galleryItems.forEach(function(item) {
+          if (category === 'all') {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'block';
+          }
+        });
+      });
+    });
+
+    // Form submission handler
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach(function(value, key) {
+          data[key] = value;
+        });
+        
+        console.log('Form submitted:', data);
+        alert('Thank you for reaching out! BONITAKLISH will get back to you soon.');
+        this.reset();
+      });
+    }
+
+    // Active navigation highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    function highlightNav() {
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(function(section) {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navItems.forEach(function(item) {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === '#' + sectionId) {
+              item.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', highlightNav);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+      // Re-initialize Lucide icons after custom JS
+      function reinitLucideAfterJS() {
+        if (typeof lucide !== 'undefined' && lucide && lucide.createIcons) {
+          try {
+            lucide.createIcons();
+          } catch (error) {
+            console.warn('⚠️ Failed to initialize Lucide after JS:', error);
+          }
+        }
+      }
+
+      if (document.readyState === 'complete') {
+        setTimeout(reinitLucideAfterJS, 100);
+      } else {
+        document.addEventListener('DOMContentLoaded', reinitLucideAfterJS);
+      }
+    } catch (error) {
+      console.error('Error executing custom JavaScript:', error);
+    }
+  })();
+
+      // Re-initialize Lucide icons after custom JS
+      function reinitLucideAfterJS() {
+        if (typeof lucide !== 'undefined' && lucide && lucide.createIcons) {
+          try {
+            lucide.createIcons();
+          } catch (error) {
+            console.warn('⚠️ Failed to initialize Lucide after JS:', error);
+          }
+        }
+      }
+
+      if (document.readyState === 'complete') {
+        setTimeout(reinitLucideAfterJS, 100);
+      } else {
+        document.addEventListener('DOMContentLoaded', reinitLucideAfterJS);
+      }
+    } catch (error) {
+      console.error('Error executing custom JavaScript:', error);
+    }
+  })();
+  
+    </script>
+</body>
+</html>
